@@ -13,8 +13,14 @@ class ReportExecutionRequest(object):
         self.attachmentsPrefix = None
         self.parameters = None
         self.outputFormat = 'pdf'
+        self.baseURL = None
         
-    
+    def setBaseUrl(self, baseURL):
+        self.baseURL = baseURL
+
+    def getBaseUrl(self):
+        return self.baseURL
+
     def getReportUnitUri(self):
         return self.reportUnitUri
     
@@ -111,7 +117,10 @@ class ReportExecutionRequest(object):
         
         if self.parameters:
             report['parameters'] = {'reportParameter':self.getParameters()}
-            
+
+        if self.baseURL:
+            report["baseURL"] = self.getBaseUrl()
+
         return report
         
     def toString(self):

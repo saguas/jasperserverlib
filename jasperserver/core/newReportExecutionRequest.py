@@ -23,6 +23,16 @@ class NewReportExecutionRequest(object):
         rest = self._connect.post(self.url, data=json.dumps(rd))
         self.result["content"] = rest.content
         return self
+
+    #get report in another format
+    def run_exports(self, requestId):
+        rd = self.request.toJson()
+        path = "/%s/exports" % (requestId)
+        setHeader('Content-type',rmt.JSON,self._connect)
+        setHeader('accept','application/json',self._connect)
+        rest = self._connect.post(self.url + path, data=json.dumps(rd))
+        self.result["content"] = rest.content
+        return self
         
     def getResult(self, rtype=None):
         return self.result.get(rtype.lower()) if rtype else self.result

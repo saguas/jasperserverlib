@@ -1,5 +1,6 @@
 from time import sleep
 from resources_mime_type import ResourceFilesMimeType as rmt
+import json
 
 class ExportExecutionRequestBuilder(object):
     
@@ -34,17 +35,15 @@ class ExportExecutionRequestBuilder(object):
             raise Exception("attachmentId mustn't be an empty string!")
             
         path = "/%s/exports/%s/attachments/%s" % (self.requestId, self.exportId, attachmentId)
-        
         while True:
             result = self.rerb.status().content
             status = json.loads(result)
-            print "status {}".format(result)
-            if  status.get('value') == "ready":
+            if status.get('value') == "ready":
                 break
             sleep(1)
-        
+        print "before pedido attachment {} path {} conn {}".format(attachmentId, self.url + path, self._connect)
         response = self._connect.get(self.url + path)
-        
+        #print "path attach 5 {} content {}".format(self.url + path, response.content)
         return response
         
     def status(self):
