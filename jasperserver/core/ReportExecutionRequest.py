@@ -119,7 +119,7 @@ class ReportExecutionRequest(object):
             report['parameters'] = {'reportParameter':self.getParameters()}
 
         if self.baseURL:
-            report["baseURL"] = self.getBaseUrl()
+            report["baseUrl"] = self.getBaseUrl()
 
         return report
         
