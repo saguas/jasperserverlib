@@ -88,7 +88,7 @@ class ReportExecutionRequest(object):
         return self.pages
         
     def setPages(self, pages):
-        self.pages = pages;
+        self.pages = pages
         return self
         
     def getParameters(self):
