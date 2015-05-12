@@ -6,6 +6,7 @@
 *.comp.js
 locale
 .wnf-lang-status
+.idea/
 dist/
 build/
 tags
