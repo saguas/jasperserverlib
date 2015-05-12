@@ -27,6 +27,9 @@ __license__ = """
 	  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """ % __copyright__
 
+import logging
+logging.getLogger('jasperserver').addHandler(logging.NullHandler())
+
 # import logging
 #
 # LOG_LEVELS = {

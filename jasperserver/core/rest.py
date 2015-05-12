@@ -35,6 +35,7 @@ import time
 #_logger = logging.getLogger(jasperserver.__name__)
 js.set_logging(js.LOG_LEVELS['debug'])
 pp = pprint.PrettyPrinter(indent=4)
+
 _logger = logging.getLogger('jasperserver')
 
 class Client(object):
