@@ -23,17 +23,17 @@
 
 import urllib, base64
 import requests
-from exceptions import JsException, StatusException
+from exceptions import StatusException
 from resource_services import ResourcesServices as rs
 from reportingService import ReportingService as rps
 import pprint
 import logging
-import jasperserver as js
+#import jasperserver as js
 from session import Session
-import time
+#import time
 
 #_logger = logging.getLogger(jasperserver.__name__)
-js.set_logging(js.LOG_LEVELS['debug'])
+#js.set_logging(js.LOG_LEVELS['debug'])
 pp = pprint.PrettyPrinter(indent=4)
 
 _logger = logging.getLogger('jasperserver')
