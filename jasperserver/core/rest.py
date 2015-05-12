@@ -48,6 +48,7 @@ class Client(object):
     #}
 
     def __init__(self, url, username='jasperadmin', password='jasperadmin', resume=False, BasicAuth=False):
+        print "in rest.py url {}".format(url)
         self.result = {}
         self.headers = {'User-Agent': 'JasperServer-Python'}
         self._url = url
