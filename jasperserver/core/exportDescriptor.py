@@ -26,5 +26,5 @@ class ExportDescriptor(object):
 
            return report
         
-       def toString(self):
-           return json.dumps(self.toJson)
+    def toString(self):
+        return json.dumps(self.toJson)
