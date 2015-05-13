@@ -20,7 +20,8 @@ def descriptor(f):
 
 class ResourceLookupDescriptor(object):
     
-    def __init__(self, resourceDescriptor={}):
+    def __init__(self, resourceDescriptor=None):
+        resourceDescriptor = resourceDescriptor or {}
         self._resourceDescriptor = resourceDescriptor#.get('resourceLookup')
     
     @descriptor 
@@ -148,6 +149,7 @@ class ResourceLookupDescriptor(object):
                 ret = desc.get(attr[3].lower() + attr[4:])
                 #if ret is of type dict return another ResourceDescriptor
                 if isinstance(ret,dict):
+                    from ResourceDescriptor import ResourceDescriptor
                     ret = ResourceDescriptor(ret)
                     
             return ret

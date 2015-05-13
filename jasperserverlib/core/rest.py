@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    jasperserverlib library module for OpenERP
-#    Copyright (C) 2012 SYLEAM ([http://www.syleam.fr]) Christophe CHAUVET
+#    jasperserverlib library module for Frappe
+#    Copyright (C) 2015 Luis Fernandes
 #
 #    This file is a part of jasperserverlib library
 #
@@ -77,9 +77,8 @@ class Client(object):
         if statuscode in StatusException:
             #raise JsException('Logging Error')
             raise StatusException[statuscode]()
-            return self
         
-       # _logger.info("jasperserverlib _login response headers: {}".format(response.headers))
+        #_logger.info("jasperserverlib _login response headers: {}".format(response.headers))
         #if response.headers.get('set-cookie'):
         self.headers['Cookie'] = response.headers['set-cookie']
         
@@ -191,7 +190,7 @@ class Client(object):
         
         return self
         
-        #type: "content" or "response"
+    #type: "content" or "response"
     def getResult(self, rtype=None):
         return self.result.get(rtype.lower()) if rtype else self.result
         

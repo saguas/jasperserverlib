@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    jasperserverlib library module for OpenERP
-#    Copyright (C) 2012 SYLEAM ([http://www.syleam.fr]) Christophe CHAUVET
+#    jasperserverlib library module for Frappe
+#    Copyright (C) 2015 Luis Fernandes
 #
 #    This file is a part of jasperserverlib library
 #
@@ -283,7 +283,7 @@ class InputControlUpdateError(Exception):
 #    raise StatusException[status]()
 StatusException = {
     204: NoContent,
-	302: LicenceExpiredOrNotValid,
+    302: LicenceExpiredOrNotValid,
     400: BadRequest,
     401: Unauthorized,
     402: PaymentRequired,

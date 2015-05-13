@@ -117,7 +117,6 @@ class Report(object):
                 
         except NoContent, e:
             print "No Content"
-            pass
             
         return self.ics
     
@@ -130,7 +129,6 @@ class Report(object):
         
         try:
             inputControls = self.reportParameterAdapter.values().get()
-            print "InputControls ", inputControls.content
             ics = json.loads(inputControls.content).get('inputControlState')
             for ic in ics:
                 ic = InputControlDescriptor(ic)
@@ -138,7 +136,6 @@ class Report(object):
                 
         except NoContent, e:
             print "No Content"
-            pass
             
         return self.icsValues
     
@@ -363,7 +360,7 @@ class Report(object):
             report = doc.get("jasperReport")
             #images = doc.get("imageExpression")
             images = report.get("background").get("band")
-            print "ImageExpression: {}".format(images)
+
     #get details, jrxml file and attachemnts
     def get(self):
         self.downloadJRXML(withattach=True)
@@ -428,5 +425,3 @@ class Report(object):
         
         
         
-    
-    

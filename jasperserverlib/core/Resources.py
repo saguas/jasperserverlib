@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    jasperserverlib library module for OpenERP
-#    Copyright (C) 2012 SYLEAM ([http://www.syleam.fr]) Christophe CHAUVET
+#    jasperserverlib library module for Frappe
+#    Copyright (C) 2015 Luis Fernandes
 #
 #    This file is a part of jasperserverlib library
 #
@@ -136,7 +136,7 @@ class Resource (object):
         
         self.result = self._connect.get(self._connect._rest_url+"_v2/serverInfo")
         self.content = self.result.content
-		
+
         return self
         
     def getResult(self):
@@ -255,7 +255,7 @@ class Report(object):
     def reportParameters(self, mandatoryId='', *otherIds):
         ids = None
         if mandatoryId:
-            ids = [mandatory]
+            ids = [mandatoryId]
             for count, id in enumerate(otherIds):
                 ids.append(id)
         return ReportParametersAdapter(self._connect, self.reportUnitUri, ids)

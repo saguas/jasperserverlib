@@ -1,6 +1,7 @@
 from time import sleep
 from resources_mime_type import ResourceFilesMimeType as rmt
 import json
+from common import setHeader
 
 class ExportExecutionRequestBuilder(object):
     
@@ -19,7 +20,7 @@ class ExportExecutionRequestBuilder(object):
         #exports = self.opresult.get('exports', [])
         limit = 10
         path = "/%s/exports/%s/outputResource" % (self.requestId, self.exportId)
-        content = None
+        response = {}
         while limit > 0:
             response = self._connect.get(self.url + path).response
             print "output-final {}".format(response.headers['output-final'])

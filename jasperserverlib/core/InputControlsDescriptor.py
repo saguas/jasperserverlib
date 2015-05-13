@@ -3,7 +3,8 @@ from ResourceDescriptor import ResourceDescriptor
 
 class InputControlDescriptor(ResourceDescriptor):
     
-    def __init__(self, resourceDescriptor={}):
+    def __init__(self, resourceDescriptor=None):
+        resourceDescriptor = resourceDescriptor or {}
         if not isinstance(resourceDescriptor, list):
             resourceDescriptor = [resourceDescriptor]
         super(InputControlDescriptor, self).__init__(resourceDescriptor)

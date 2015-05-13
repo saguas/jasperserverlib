@@ -4,7 +4,6 @@ class ResourcesServices(object):
     
     def __init__(self, js_connect):
         self._connect = js_connect
-        pass
     
     def resources(self):
         return Resources(self._connect)

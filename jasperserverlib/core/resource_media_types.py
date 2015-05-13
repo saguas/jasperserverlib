@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    jasperserverlib library module for OpenERP
-#    Copyright (C) 2012 SYLEAM ([http://www.syleam.fr]) Christophe CHAUVET
+#    jasperserverlib library module for Frappe
+#    Copyright (C) 2015 Luis Fernandes
 #
 #    This file is a part of jasperserverlib library
 #

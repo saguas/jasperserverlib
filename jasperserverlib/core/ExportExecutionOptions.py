@@ -39,7 +39,7 @@ class ExportExecutionOptions(object):
         self.allowInlineScripts = allowInlineScripts
     
     def toJson(self):
-        report =  {"outputFormat": self.getOutputFormat(), "pages": self.getPages()}
+        report = {"outputFormat": self.getOutputFormat(), "pages": self.getPages()}
         
         if self.attachmentsPrefix:
             report['attachmentsPrefix'] = self.attachmentsPrefix

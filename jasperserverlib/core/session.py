@@ -5,7 +5,6 @@ class Session(object):
     def __init__(self):
         self.ids = {}
         self.sessionId = None
-        pass
     
     def setSessionId(self, sessionId):
         self.sessionId = sessionId

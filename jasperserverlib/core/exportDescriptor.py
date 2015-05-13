@@ -1,7 +1,8 @@
 import json
 
 class ExportDescriptor(object):
-    def __init__(self, resourceDescriptor={}):
+    def __init__(self, resourceDescriptor=None):
+        self.resourceDescriptor = resourceDescriptor or {}
         self.outputFormat = None
         self.pages = None
         self.attachmentsPrefix = None

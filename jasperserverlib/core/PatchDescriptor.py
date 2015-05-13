@@ -34,7 +34,7 @@ class PatchDescriptor(object):
         item = PatchItem()
         item.setExpression(expression)
         self.items.append(item)
-        return self;
+        return self
         
     def toString(self):
         return self.__str__()
