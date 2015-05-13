@@ -1,7 +1,7 @@
 import json
 import copy
 
-#import jasperserver.core
+#import jasperserverlib.core
 
 def descriptor(f):
     def new_f(self, name=None):

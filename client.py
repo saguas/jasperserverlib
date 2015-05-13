@@ -6,16 +6,16 @@ import json
 import base64
 from time import sleep
 
-import jasperserver.core as jasper
-from jasperserver.repo_search import Search
-from jasperserver.resource_details import Details
-from jasperserver.resource_download import DownloadBinary
-from jasperserver.report import Report
-from jasperserver.core.resource_search_param import ResourceSearchParameter as rsp
+import jasperserverlib.core as jasper
+from jasperserverlib.repo_search import Search
+from jasperserverlib.resource_details import Details
+from jasperserverlib.resource_download import DownloadBinary
+from jasperserverlib.report import Report
+from jasperserverlib.core.resource_search_param import ResourceSearchParameter as rsp
 
 pp = pprint.PrettyPrinter(indent=4)
 
-session = jasper.session('http://localhost:8090/jasperserver', 'jasperadmin', 'jasperadmin')
+session = jasper.session('http://localhost:8090/jasperserverlib', 'jasperadmin', 'jasperadmin')
 
 #s = Search(session)
 

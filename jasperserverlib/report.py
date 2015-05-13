@@ -3,8 +3,8 @@ import json
 import xmltodict
 import io
 
-from jasperserver.resource_details import Details
-from jasperserver.resource_download import DownloadBinary
+from jasperserverlib.resource_details import Details
+from jasperserverlib.resource_download import DownloadBinary
 from core.PatchDescriptor import PatchDescriptor
 from core.exceptions import ReportNotFoundError, ReportRunError, ReportJRXMLError, PathError, NoContent, InputControlUpdateError
 #from report_inputControls import InputControls

@@ -28,7 +28,7 @@ __license__ = """
 """ % __copyright__
 
 import logging
-logging.getLogger('jasperserver').addHandler(logging.NullHandler())
+logging.getLogger('jasperserverlib').addHandler(logging.NullHandler())
 
 # import logging
 #
@@ -46,7 +46,7 @@ logging.getLogger('jasperserver').addHandler(logging.NullHandler())
 # 	format = r'[%(levelname)s] %(message)s'
 # 	handler.setFormatter(logging.Formatter(format))
 # 	loggers = [
-# 		logging.getLogger('jasperserver'),
+# 		logging.getLogger('jasperserverlib'),
 # 	]
 # 	for logger in loggers:
 # 		logger.setLevel(LOG_LEVELS.get(level, logging.INFO))

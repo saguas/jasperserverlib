@@ -1,17 +1,17 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    jasperserver library module for OpenERP
+#    jasperserverlib library module for OpenERP
 #    Copyright (C) 2012 SYLEAM ([http://www.syleam.fr]) Christophe CHAUVET
 #
-#    This file is a part of jasperserver library
+#    This file is a part of jasperserverlib library
 #
-#    jasperserver library is free software: you can redistribute it and/or modify
+#    jasperserverlib library is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
 #    the Free Software Foundation, either version 3 of the License, or
 #    (at your option) any later version.
 #
-#    jasperserver library is distributed in the hope that it will be useful,
+#    jasperserverlib library is distributed in the hope that it will be useful,
 #    but WITHOUT ANY WARRANTY; without even the implied warranty of
 #    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #    GNU General Public License for more details.

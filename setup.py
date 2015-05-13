@@ -5,7 +5,7 @@ with open("requirements.txt", "r") as f:
 
 setup(
     # Application name:
-    name="Jasper Web Serever Report",
+    name="Jasper Web Server Report",
 
     # Version number (initial):
     version="0.1.2",
@@ -15,13 +15,13 @@ setup(
     author_email="luisfmfernandes@gmail.com",
 
     # Packages
-    packages=find_packages(),#["jasperserver"],
+    packages=find_packages(),#["jasperserverlib"],
 
     # Include additional files into the package
     include_package_data=True,
     #
     # license="LICENSE.txt",
-    description="Web rest to jasperserver.",
+    description="Web rest to jasperserverlib.",
 
     # long_description=open("README.txt").read(),
 
